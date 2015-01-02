@@ -14,7 +14,7 @@
              <span class="stockFlag lowStock">
                 [{oxmultilang ident="LOW_STOCK"}] 
                    [{if $oDetailsProduct->oxarticles__vtecshowstock->value}]
-                      [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__vtecshowstock->value}]</b>
+                      [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                    [{/if}]  
              </span>
    [{elseif $oDetailsProduct->getStockStatus() == 0}]
@@ -24,7 +24,7 @@
                             [{elseif $oViewConf->getStockOnDefaultMessage()}]
                                 [{oxmultilang ident="READY_FOR_SHIPPING"}]
                           [{if $oDetailsProduct->oxarticles__vtecshowstock->value}]
-                             [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__vtecshowstock->value}]</b>[{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
+                             [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b>[{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                           [{/if}]       
                         [{/if}]
              </span>
