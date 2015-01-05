@@ -23,9 +23,10 @@
                                 [{$oDetailsProduct->oxarticles__oxstocktext->value}]
                             [{elseif $oViewConf->getStockOnDefaultMessage()}]
                                 [{oxmultilang ident="READY_FOR_SHIPPING"}]
-                          [{if $oDetailsProduct->oxarticles__vtecshowstock->value}]
-                             [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b>[{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
-                          [{/if}]       
                         [{/if}]
+                        
+              [{if $oDetailsProduct->oxarticles__vtecshowstock->value}]
+                      [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b>[{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
+              [{/if}]                 
              </span>
 [{/if}]
