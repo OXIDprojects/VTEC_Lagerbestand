@@ -16,6 +16,7 @@ Installation:
 
 In der Artikelverwaltung im Reiter Lager ist nun eine Checkbox sichtbar, wird diese aktiviert wird beim
 entsprechenden Artikel der Lagerbestand in der Artikel-Detail-Ansicht angezeigt.
+Im Feld "Limit" kann ein Limit zur Anzeige angegeben werden. Wird dieser unterschritten wird der Bestand angezeigt ansonsten nicht.
 Die Texte "Verfügbare Menge", ect. können im Ordner application/translations/de in der _lang.php angepasst werden.
 Nach jeder Änderung muss der tmp Ordner geleert werden.
 Ideal um zBsp. Sell-Out Artikel mit begrenzten Mengen zu bewerben....
