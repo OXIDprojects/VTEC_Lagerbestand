@@ -2,7 +2,7 @@
 
 /**
  *
- * Version:    1.0
+ * Version:    2.0
  * Author:     Pasquale Pari | Vendingtechnik
  * Author URL: http://www.vendingtechnik.com
  * License:    GNU GPL 3.0
@@ -20,7 +20,7 @@ $aModule = array (
     'title'        => 'VTEC Lagerbestand ab CE 4.9.0',
     'description'  => 'Bei bestimmten Artikel kann der tatsächliche Lagerbestand, durch setzen der Checkbox in der Artikelverwaltung<br \>(im Reiter Lager) für den entsprechenden Artikel angezeigt werden.',
     'thumbnail'    => 'lagerbestand.jpg',
-    'version'      => '1.0',
+    'version'      => '2.0',
     'author'       => 'Pasquale Pari',
     'url'          => 'http://www.vendingtechnik.com <br \> http://www.getraenkekiste.ch',
     'email'        => 'pasquale.pari@vendingtechnik.com',
