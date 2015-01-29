@@ -1,11 +1,14 @@
 [{if $oDetailsProduct->getStockStatus() == -1}]
              <span class="stockFlag notOnStock">
+                [{if $oDetailsProduct->oxarticles__oxstock->value <0}]
+                            [{oxmultilang ident="VTEC_LAGERBESTAND_BESTELLT"}]
+                [{else}] 
                        [{if $oDetailsProduct->oxarticles__oxnostocktext->value}]
                                 [{$oDetailsProduct->oxarticles__oxnostocktext->value}]
                             [{elseif $oViewConf->getStockOffDefaultMessage()}]
                                 [{oxmultilang ident="MESSAGE_NOT_ON_STOCK"}]
                        [{/if}]
-                       
+                 [{/if}]      
                        [{if $oDetailsProduct->getDeliveryDate()}]
                                 [{oxmultilang ident="AVAILABLE_ON"}] [{$oDetailsProduct->getDeliveryDate()}]
                        [{/if}]
@@ -13,7 +16,7 @@
    [{elseif $oDetailsProduct->getStockStatus() == 1}]
              <span class="stockFlag lowStock">
                 [{oxmultilang ident="LOW_STOCK"}] 
-                   [{if $oDetailsProduct->oxarticles__vtecshowstock->value || $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
+                   [{if $oDetailsProduct->oxarticles__vtecshowstock->value && $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
                        [{if $oDetailsProduct->oxarticles__oxstock->value < $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
                              [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                        [{/if}]
@@ -29,7 +32,7 @@
                                 [{oxmultilang ident="READY_FOR_SHIPPING"}]
                         [{/if}]
                         
-              [{if $oDetailsProduct->oxarticles__vtecshowstock->value || $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
+              [{if $oDetailsProduct->oxarticles__vtecshowstock->value && $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
                        [{if $oDetailsProduct->oxarticles__oxstock->value < $oDetailsProduct->oxarticles__vtecshowstocklimit->value}]
                              [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                        [{/if}]
