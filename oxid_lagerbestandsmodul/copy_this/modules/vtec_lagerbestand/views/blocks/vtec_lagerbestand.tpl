@@ -21,7 +21,7 @@
                              [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                        [{/if}]
                    [{else}]
-                        [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
+                        [{* oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT *}]
                    [{/if}]  
              </span>
    [{elseif $oDetailsProduct->getStockStatus() == 0}]
@@ -37,7 +37,7 @@
                              [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
                        [{/if}]
                    [{else}]
-                        [{oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT}]
+                        [{* oxmultilang ident="VTEC_LAGERBESTAND_ANZEIGE}] <b>[{$oDetailsProduct->oxarticles__oxstock->value}]</b> [{oxmultilang ident="VTEC_LAGERBESTAND_EINHEIT *}]
                [{/if}]                
              </span>
 [{/if}]
